@@ -1,0 +1,38 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>All Dealer Details</title>
+{%endblock%}
+
+{% block body %}
+
+<div class="container-fluid martop7">
+    <div class="jumbotron jumcust">
+        <h2>Dealer Details</h2>
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <table border="1" class="table table-responsive table-hover col-md-10">
+                <tr>
+                    <th>Dealer ID</th>
+                    <th>Dealer Name</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                </tr>
+                {% for foo in dealer %}
+                    <tr>
+                        <td class="idlink"><a href="/pharma/dealerformview{{ foo.id }}/">{{ foo.id }}</a></td>
+                        <td>{{ foo.dname }}</td>
+                        <td>{{ foo.address }}</td>
+                        <td>{{ foo.phn_no }}</td>
+                        <td>{{ foo.email }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <footer><h3>Click on a Dealer ID to Update or Delete the record.</h3></footer>
+    </div>
+</div>
+{% endblock %}
