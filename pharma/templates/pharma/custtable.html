@@ -19,17 +19,18 @@
                     <th>Last Name</th>
                     <th>Address</th>
                     <th>Phone Number</th>
+                    <th>Description</th>
                     <th>Email</th>
                 </tr>
                 {% for foo in cust %}
                     <tr>
-                        <td class="idlink"><a href="/pharma/custformview{{ foo.C_id }}/">{{ foo.C_id }}</a></td>
+                        <td class="idlink"><a href="/pharma/custformview{{ foo.id }}/">{{ foo.C_id }}</a></td>
                         <td>{{ foo.fname }}</td>
                         <td>{{ foo.lname }}</td>
                         <td>{{ foo.address }}</td>
                         <td>{{ foo.phn_no }}</td>
-                        <td>{{ foo.email }}</td>
                         <td>{{ foo.description }}</td>
+                        <td>{{ foo.email }}</td>
                     </tr>
                 {% endfor %}
             </table>

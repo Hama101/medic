@@ -145,7 +145,7 @@ def custforminsert(request):
         cust.address = request.POST['address']
         cust.phn_no = request.POST['pno']
         cust.email = request.POST['email']
-        cust.Description = request.POST['Description']
+        cust.description = request.POST['Description']
         cust.save()
     except IntegrityError:
         return render(request, "pharma/new.html")
