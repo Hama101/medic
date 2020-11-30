@@ -130,8 +130,7 @@ def custfind(request):
     return render(request,'pharma/custfind.html')
 
 def custfound(request):
-    CidasString = request.POST.get("Cid")
-    Cid = int(CidasString)
+    Cid = request.POST.get("Cid")
     cust = Customer.objects.filter(C_id=Cid)
     dict = {"cust" : cust}
     return render(request,'pharma/custfound.html' , dict)

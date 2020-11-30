@@ -18,9 +18,9 @@
                     <th>First Name</th>
                     <th>Last Name</th>
                     <th>Address</th>
-                    <th>Phone Number</th>
                     <th>Description</th>
                     <th>Email</th>
+                    <th>Phone Number</th>
                 </tr>
                 {% for foo in cust %}
                     <tr>
@@ -28,9 +28,9 @@
                         <td>{{ foo.fname }}</td>
                         <td>{{ foo.lname }}</td>
                         <td>{{ foo.address }}</td>
-                        <td>{{ foo.phn_no }}</td>
                         <td>{{ foo.description }}</td>
                         <td>{{ foo.email }}</td>
+                        <td>{{ foo.phn_no }}</td>
                     </tr>
                 {% endfor %}
             </table>
